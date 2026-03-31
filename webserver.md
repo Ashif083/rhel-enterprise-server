@@ -1,0 +1,3 @@
+-Installed and configured Apache (httpd)
+-Hosted the company webpage
+-Enabled and managed service via systemd
