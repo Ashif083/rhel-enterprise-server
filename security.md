@@ -1,0 +1,4 @@
+-Disabled root SSH login
+-Configured firewall (only SSH & HTTP allowed)
+-Enforced SELinux (Enforcing mode)
+-Implemented least-privilege access model
