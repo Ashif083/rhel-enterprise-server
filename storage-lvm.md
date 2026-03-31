@@ -1,0 +1,5 @@
+-Configured Logical Volume Management on separate disk
+-Created:
+    -/data for company data
+    -/backup for backups
+-Persistent mounting via /etc/fstab
