@@ -3,7 +3,11 @@ This project demonstrates the design and implementation of a production-style Li
 The goal was to simulate a real-world enterprise environment including:<br>
 -User management<br>
 -Storage management (LVM)<br>
+![LVM](screenshots/lvm.png) <br>
 -Web server deployment<br>
+![Web](screenshots/apache_hostpng) <br>
 -Security hardening<br>
+![Permissions](screenshots/permissions.png) <br>
 -Automated backup<br>
--System monitoring
+-System monitoring<br>
+![Monitoring](screenshots/monitoring.png)
