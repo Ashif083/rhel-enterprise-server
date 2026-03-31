@@ -5,7 +5,7 @@ The goal was to simulate a real-world enterprise environment including:<br>
 -Storage management (LVM)<br>
 ![LVM](screenshots/lvm.png) <br>
 -Web server deployment<br>
-![Web](screenshots/apache_hostpng) <br>
+![Web](screenshots/apache_host.png) <br>
 -Security hardening<br>
 ![Permissions](screenshots/permissions.png) <br>
 -Automated backup<br>
