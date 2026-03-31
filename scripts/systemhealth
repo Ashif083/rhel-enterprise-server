@@ -1,0 +1,36 @@
+#/bin/bash
+echo "========= System Health ========="
+echo "Date: $(date +'%d-%B-%Y')"
+echo "Time: $(date +'%I:%M %p')"
+
+#CPU Usage
+cores=$(nproc)
+load5=$(uptime | awk '{sub(/,/, "", $(NF-1)); print $(NF-1)}')
+threshold=$(awk -v c="$cores" 'BEGIN {print c * 0.7}')
+
+echo "Cores: $cores | 5-min Load: $load5 | Threshold: $threshold"
+
+if awk -v l="$load5" -v t="$threshold" 'BEGIN {exit !(l <= t)}'; then
+    echo "CPU Load: OK"
+else
+    echo "CPU Load: WARNING/OVERLOAD"
+fi
+
+#Memory Usage
+avail=$(free -m | awk '/Mem:/ {print $7}')
+
+threshold=200
+
+if [ "$avail" -lt "$threshold" ]; then
+    echo "Memory Usage: Error"
+else
+    echo "Memory Usage: Ok"
+fi
+
+#Directory Space
+df -h /data | awk 'NR==2 {print "/data: " $5, "used"}'
+df -h /backup | awk 'NR==2 {print "/backup: " $5, "used"}'
+
+#Services
+systemctl is-active --quiet httpd && echo "httpd -> running" || echo "httpd -> not running"
+systemctl is-active --quiet sshd && echo "sshd -> running" || echo "sshd -> not running"
