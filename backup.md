@@ -1,0 +1,5 @@
+-Created automated backup script:
+    -Copies /data → /backup
+    -Uses date-based directories
+-Implemented cron job for daily backup
+-Logging system for backup status
