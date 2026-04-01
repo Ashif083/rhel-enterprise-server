@@ -1,6 +1,7 @@
-Users (Dev / HR / Admin) ↓ RHEL Server 
-├── Apache (Web Server) 
-├── LVM Storage (/data, /backup) 
-├── Backup Automation (cron) 
-├── Monitoring Script 
+Users (Dev / HR / Admin) ↓ RHEL Server <br>
+├── Apache (Web Server) <br>
+├── LVM Storage (/data, /backup) <br>
+├── Backup Automation (cron) <br>
+├── Monitoring Script <br>
 ├── Firewall + SELinux
+<br>
